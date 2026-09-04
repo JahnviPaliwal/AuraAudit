@@ -1,4 +1,4 @@
-# ⚖️ AuraAudit: Autonomous AI Financial Controller & Treasury Defense Engine
+# AuraAudit: Autonomous AI Financial Controller & Treasury Defense Engine
 
 > **Submitted for:** Razorpay AI Builder Internship 2026  
 > **Track:** AI Finance Controller Track  
@@ -7,7 +7,7 @@
 
 ---
 
-## 🎯 Executive Pitch
+## Executive Pitch
 
 > *"In fast-scaling Indian startups, month-end financial reconciliation isn't just an accounting headache—it is an existential compliance risk. A single delayed MSME vendor payment under Section 43B(h), a structured retainer evading Section 194J TDS, or an unfiled GSTR-2B input tax credit can trigger 30% corporate tax add-backs and compounding penalties at 3x the RBI repo rate. Finance teams fly blind between chaotic bank statements, messy ERP records, and shifting tax codes.*  
 >  
@@ -15,7 +15,7 @@
 
 ---
 
-## 📸 Application Preview & Visual Showcase
+## Application Preview & Visual Showcase
 
 ### 1. Unified Controller Command Center & Statutory Audit KPIs
 ![AuraAudit Dashboard Overview](docs/screenshots/dashboard_overview.png)
@@ -35,20 +35,14 @@
 
 ---
 
-### 4. Interactive CA Chatbot with Run Provenance
-![In-Context CA Assistant](docs/screenshots/ca_chatbot.png)
-*Conversational Chartered Accountant assistant capable of retrieving specific transaction IDs (e.g., `TX-TDS-ERR-104`), explaining compliance citations, and breaking down batch accuracy.*
-
----
-
-## 🚨 What Problem Does AuraAudit Solve?
+## What Problem Does AuraAudit Solve?
 
 Modern finance controllers and founders operate in an unforgiving regulatory environment. The Indian tax and corporate compliance framework places severe burdens on period-close reconciliation:
 
 1. **Section 43B(h) MSME 45-Day Landmine:**  
    Invoices from micro and small enterprises must be settled within 45 days (or 15 days without an agreement). Any overdue payment on March 31st results in **complete disallowance of the expense**, triggering a 30% corporate tax add-back plus compound interest penalties at **3x the RBI repo rate**.
 2. **TDS Structuring & Under-Deduction (Section 194J & 194R):**  
-   Vendors and contractors frequently split invoices into sub-₹30,000 increments to bypass mandatory 10% TDS deductions. Non-cash perks (contractor laptops, gift cards > ₹20,000) go unwithheld under Section 194R.
+   Vendors and contractors frequently split invoices into sub-Rs. 30,000 increments to bypass mandatory 10% TDS deductions. Non-cash perks (contractor laptops, gift cards > Rs. 20,000) go unwithheld under Section 194R.
 3. **GSTR-2B Input Tax Credit (ITC) Leakage:**  
    Expenses booked against unfiled or non-compliant vendor GSTINs result in disallowed ITC, leading to trapped working capital and direct revenue leakage.
 4. **Messy Bank Descriptors & Typo Obfuscation:**  
@@ -58,7 +52,7 @@ Modern finance controllers and founders operate in an unforgiving regulatory env
 
 ---
 
-## 💡 How Does AuraAudit Solve It?
+## How Does AuraAudit Solve It?
 
 AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial architecture**:
 
@@ -71,7 +65,7 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
                      ┌─────────────────────────────────────────────────────┐
                      │          STAGE 1: Deterministic Heuristic Core      │
                      │  - Exact Duplicate Detection                        │
-                     │  - Missing Receipt Checks (> ₹10,000 threshold)     │
+                     │  - Missing Receipt Checks (> Rs. 10,000 threshold)  │
                      │  - Direct GSTR-2B ITC Matching                      │
                      │  - High-confidence Section 194J threshold filtering │
                      └──────────┬───────────────────────────────┬──────────┘
@@ -103,13 +97,13 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 │     Interactive Next.js Controller Dashboard     │   │      Monte Carlo Stochastic Treasury Engine     │
 │  - 1-Click Journal Approval                     │   │  - 100 Sim Paths: P10 / P50 / P90 Runway       │
 │  - MSME 45-Day Priority Queue (3x RBI Interest) │   │  - Interactive Strategy Playground (Hiring/CAC) │
-│  - ERP Export (QuickBooks .iif, Xero .csv)      │   │  - In-Context CA Chatbot Assistant              │
+│  - ERP Export (QuickBooks .iif, Xero .csv)      │   │  - Reconciled Cash Balance Variance Tracking    │
 └─────────────────────────────────────────────────┘   └─────────────────────────────────────────────────┘
 ```
 
 ---
 
-## ✨ Core Features & Capabilities
+## Core Features & Capabilities
 
 ### 1. Two-Stage Hybrid Reconciliation Engine
 * **Deterministic Stage 1:** Filters 85%+ of obvious entries (exact duplicates, verified GSTINs, standard payroll) at near-zero latency and $0 token cost.
@@ -118,9 +112,9 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 
 ### 2. Comprehensive Indian Statutory Tax Auditing
 * **Section 43B(h) MSME Delay Watchdog:** Flags invoices unpaid past the 45-day statutory window, calculates the 30% tax add-back liability, and tracks compounding penalty interest.
-* **Section 194J & 194R TDS Deductions:** Unmasks structured retainers split under ₹30,000 and flags untaxed contractor gifts/perks above ₹20,000.
+* **Section 194J & 194R TDS Deductions:** Unmasks structured retainers split under Rs. 30,000 and flags untaxed contractor gifts/perks above Rs. 20,000.
 * **GSTR-2B ITC Matching:** Isolates vendor invoices unfiled on the GST portal, automatically reserving disallowed tax credits.
-* **Corporate Governance Auditing:** Detects duplicate lease disbursements, unapproved SaaS surges (e.g. 250% Slack price jump), and missing receipts above ₹10,000.
+* **Corporate Governance Auditing:** Detects duplicate lease disbursements, unapproved SaaS surges (e.g. 250% Slack price jump), and missing receipts above Rs. 10,000.
 
 ### 3. Automated Double-Entry Adjusting Journals
 * Every identified compliance exception automatically generates a balanced debit and credit adjusting entry (e.g., `Debit IT-SEC-194J`, `Credit IT-PAYABLE`).
@@ -141,19 +135,15 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 * Dedicated liquidation queue sorting micro/small enterprise payables by statutory urgency.
 * Live compounding interest ticker at **3x the RBI repo rate** (customizable rate slider).
 
-### 7. In-Context CA Chatbot with Run Provenance
-* Natural language financial assistant grounded in the current audit run session.
-* Deep-links directly to transaction records (e.g., query *"Why was TX-MSME-ERR-211 flagged?"* or *"What is our current precision?"*).
-
-### 8. Multi-Format ERP Export
+### 7. Multi-Format ERP Export
 * Direct one-click download of adjusting entries in **Intuit QuickBooks (`.iif`)**, **Xero Accounting (`.csv`)**, or **Standard CSV**.
 
-### 9. SQLite Run History & Provenance Tracking
+### 8. SQLite Run History & Provenance Tracking
 * Every reconciliation session is stored in an embedded SQLite database (`runs.db`) with full timestamping, match rates, precision, recall, and raw transaction payloads.
 
 ---
 
-## 🏗️ Architecture & Technology Stack
+## Architecture & Technology Stack
 
 | Layer | Technology | Rationale |
 |---|---|---|
@@ -166,7 +156,7 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 
 ---
 
-## 🧠 Architectural Decisions: What & Why
+## Architectural Decisions: What & Why
 
 ### 1. Why a Two-Stage Hybrid Engine instead of Pure LLM?
 * **Problem:** Feeding 10,000 raw bank rows into an LLM causes huge token bills, 30+ second latency, and potential hallucination of statutory percentages.
@@ -174,8 +164,8 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 * **Result:** **95% reduction in API cost**, **sub-second audit execution**, and **zero hallucination on mathematical thresholds**.
 
 ### 2. Why Monte Carlo Stochastic Simulation over Static Forecasts?
-* **Problem:** Standard spreadsheets project cash balance as $Balance_{t+1} = Balance_t + Inflow - Outflow$. This assumes consistent payments and hides catastrophic downside insolvency.
-* **Decision:** Implemented a **100-iteration Monte Carlo generator** applying Gaussian noise to inflows ($\sigma = 15\%$) and outflows ($\sigma = 5\%$), factored by client payment delays and statutory tax liabilities.
+* **Problem:** Standard spreadsheets project cash balance as static balance progression. This assumes consistent payments and hides catastrophic downside insolvency.
+* **Decision:** Implemented a **100-iteration Monte Carlo generator** applying Gaussian noise to inflows (sigma = 15%) and outflows (sigma = 5%), factored by client payment delays and statutory tax liabilities.
 * **Result:** Controllers see **P10/P50/P90 percentile bands**, clearly identifying the exact month runway could hit zero under stress.
 
 ### 3. Why Multi-Provider AI with Dynamic Groq Discovery & Local Fallback?
@@ -190,10 +180,10 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 
 ---
 
-## 🛠️ Engineering Challenges & How They Were Solved
+## Engineering Challenges & How They Were Solved
 
 ### Challenge 1: LLM Hallucination and Format Drift in JSON Outputs
-* **Symptom:** Small LLMs frequently wrap responses in markdown backticks (` ```json `), include conversational pleasantries, or output reasoning tags (`<think>...</think>`), which breaks `json.loads()`.
+* **Symptom:** Small LLMs frequently wrap responses in markdown backticks, include conversational pleasantries, or output reasoning tags (`<think>...</think>`), which breaks `json.loads()`.
 * **Solution:** Engineered a multi-tier regex sanitization pipeline in `controller_agent.py`:
   1. Strips `<think>` tags completely.
   2. Extracts code between markdown blocks.
@@ -210,7 +200,7 @@ AuraAudit introduces an **autonomous, self-correcting two-stage hybrid financial
 
 ---
 
-## 🤖 AI Models & Provider Support
+## AI Models & Provider Support
 
 AuraAudit supports flexible AI backends configured via UI modal or environment variables:
 
@@ -224,7 +214,7 @@ AuraAudit supports flexible AI backends configured via UI modal or environment v
 
 ---
 
-## 🚀 Step-by-Step Setup & How to Run
+## Step-by-Step Setup & How to Run
 
 ### Prerequisites
 * **Node.js** v18.0 or higher
@@ -277,13 +267,13 @@ python test_reconciliation.py
 ```
 
 ### 5. Configure API Keys (In-App or Environment)
-* Click the **Settings (⚙️)** icon in the top navigation bar of the application.
+* Click the **Settings** icon in the top navigation bar of the application.
 * Choose your provider (**OpenAI / OpenRouter** or **Groq**) and enter your API key.
 * *Note:* You can also run the application without an API key; the system will seamlessly utilize the built-in deterministic CA engine.
 
 ---
 
-## 📊 Ground Truth Benchmark & Performance Evaluation
+## Ground Truth Benchmark & Performance Evaluation
 
 AuraAudit includes an automated evaluation harness (`evaluator.py`) that benchmarks reconciliation results against synthetic ground-truth ledgers (`ground_truth.json`).
 
@@ -297,7 +287,7 @@ AuraAudit includes an automated evaluation harness (`evaluator.py`) that benchma
 
 ---
 
-## 🔮 Future Roadmap & Enhancements
+## Future Roadmap & Enhancements
 
 - [ ] **Direct RazorpayX Banking API Webhooks:** Stream live transactions directly into the audit pipeline upon disbursement.
 - [ ] **Multimodal Invoice & OCR Ingestion:** Parse physical vendor receipts, tax invoices, and GSTR-2B JSON files directly via vision models.
@@ -307,7 +297,7 @@ AuraAudit includes an automated evaluation harness (`evaluator.py`) that benchma
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 AuraAudit bridges the critical chasm between raw banking disbursement records and statutory tax compliance. By synthesizing high-speed deterministic heuristics, resilient LLM reasoning, and stochastic treasury forecasting, AuraAudit empowers modern finance controllers to close their books in minutes with absolute confidence.
 
@@ -315,13 +305,13 @@ Built with production-grade engineering principles—fault-tolerant fallbacks, d
 
 ---
 
-## 👨‍💻 Candidate Pitch for Razorpay AI Builder Internship 2026
+## Candidate Pitch for Razorpay AI Builder Internship 2026
 
 **To the Razorpay Hiring Team & AI Engineering Leads:**
 
 > *"At Razorpay, you build the financial backbone of the internet in India. RazorpayX and Razorpay Payroll handle billions in disbursements, yet every customer using these products faces the harrowing reality of month-end reconciliation, Section 43B(h) compliance, and tax liability add-backs.*  
 >  
-> *I built **AuraAudit** specifically to prove what an AI-native financial controller should look like: not a simple wrapper around a chatbot, but a resilient, two-stage system grounded in Indian tax law, equipped with Monte Carlo treasury simulation, and capable of operating with 100% uptime even under API degradation.*  
+> *I built **AuraAudit** specifically to prove what an AI-native financial controller should look like: not a simple wrapper around an API call, but a resilient, two-stage system grounded in Indian tax law, equipped with Monte Carlo treasury simulation, and capable of operating with 100% uptime even under API degradation.*  
 >  
 > *I understand the intersection of fintech, systems engineering, and generative AI. During this internship, I want to bring this exact rigor to Razorpay's AI initiatives—building software that moves money with precision, defends runway, and automates compliance at scale. Let's build the autonomous financial future together."*
 
