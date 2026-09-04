@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraAudit Pitch Intro (0:00 - 0:45)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #000; color: #fff; overflow: hidden; width: 100vw; height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Top HUD / Timeline Tracker */
+    .hud {
+      position: absolute; top: 0; left: 0; right: 0; height: 50px;
+      display: flex; justify-content: space-between; items-center; padding: 0 30px;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); border-bottom: 1px solid #222;
+      z-index: 100; font-size: 13px; font-family: monospace;
+    }
+    .hud-left { display: flex; align-items: center; gap: 15px; }
+    .hud-badge { background: #EAB308; color: #000; font-weight: bold; padding: 3px 10px; border-radius: 4px; font-size: 11px; }
+    .hud-time { color: #F59E0B; font-weight: bold; font-size: 16px; }
+    .hud-controls button {
+      background: #171717; color: #fff; border: 1px solid #444; padding: 6px 16px;
+      border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; margin-left: 8px; transition: all 0.2s;
+    }
+    .hud-controls button:hover { background: #EAB308; color: #000; border-color: #EAB308; }
+
+    /* Scene Container */
+    #stage { position: relative; width: 100%; height: 100%; overflow: hidden; background: #000; }
+    .scene { position: absolute; inset: 0; display: none; opacity: 0; transition: opacity 0.8s ease-in-out; }
+    .scene.active { display: flex; opacity: 1; }
+
+    /* SCENE 1: 00:00 - 00:15 Split Screen Crisis */
+    #scene1 { display: none; width: 100%; height: 100%; }
+    .split-left {
+      width: 50%; height: 100%; background: radial-gradient(circle at center, #151821 0%, #08090D 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; position: relative;
+      border-right: 1px solid #262626;
+    }
+    .avatar-wrapper {
+      position: relative; width: 220px; height: 220px; border-radius: 50%;
+      border: 3px solid #EAB308; box-shadow: 0 0 50px rgba(234, 179, 8, 0.2);
+      display: flex; justify-content: center; align-items: center; overflow: hidden; margin-bottom: 25px;
+    }
+    .avatar-wrapper svg { width: 140px; height: 140px; fill: #EAB308; opacity: 0.9; }
+    .status-tag {
+      background: rgba(239, 68, 68, 0.15); border: 1px solid #EF4444; color: #FCA5A5;
+      padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: bold; margin-bottom: 12px; text-transform: uppercase;
+      letter-spacing: 1px; animation: pulseRed 2s infinite;
+    }
+    .crisis-title { font-size: 24px; font-weight: 800; text-align: center; color: #fff; line-height: 1.3; }
+    .crisis-sub { font-size: 14px; color: #888; margin-top: 8px; text-align: center; max-width: 380px; }
+
+    .split-right {
+      width: 50%; height: 100%; background: #050505; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; padding: 40px; position: relative;
+    }
+    
+    /* Stamp Box */
+    .stamp-box {
+      width: 100%; max-width: 440px; background: #111; border: 2px dashed #EF4444;
+      border-radius: 12px; padding: 24px; box-shadow: 0 0 40px rgba(239, 68, 68, 0.2);
+      position: relative; transform: scale(0.9); transition: all 0.5s ease-out; opacity: 0;
+    }
+    .stamp-box.show { opacity: 1; transform: scale(1) rotate(-1.5deg); }
+    .stamp-header { color: #EF4444; font-weight: 900; font-size: 18px; letter-spacing: 1px; border-bottom: 1px solid #331111; padding-bottom: 10px; margin-bottom: 12px; }
+    .stamp-body { font-size: 13px; color: #ccc; line-height: 1.6; }
+    .stamp-body span { color: #fff; font-weight: bold; }
+    
+    /* Penalty Counter Widget */
+    .ticker-card {
+      margin-top: 30px; width: 100%; max-width: 440px; background: linear-gradient(135deg, #1f0808 0%, #0d0000 100%);
+      border: 1px solid #7f1d1d; border-radius: 12px; padding: 20px; text-align: center;
+      box-shadow: 0 0 60px rgba(239, 68, 68, 0.3); opacity: 0; transform: translateY(20px); transition: all 0.6s ease;
+    }
+    .ticker-card.show { opacity: 1; transform: translateY(0); }
+    .ticker-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: #FCA5A5; font-weight: 700; }
+    .ticker-amount { font-size: 44px; font-weight: 900; color: #EF4444; font-family: monospace; margin: 8px 0; text-shadow: 0 0 20px rgba(239,68,68,0.6); }
+
+    /* SCENE 2: 00:15 - 00:45 3D Landmines */
+    #scene2 {
+      display: none; width: 100%; height: 100%; flex-direction: column; justify-content: center; align-items: center;
+      background: radial-gradient(circle at center, #11141a 0%, #000000 80%); padding: 50px 30px; position: relative;
+    }
+    .scene2-title { font-size: 28px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 10px; }
+    .scene2-sub { font-size: 14px; color: #888; margin-bottom: 40px; text-align: center; }
+
+    .nodes-grid { display: flex; gap: 30px; max-width: 1150px; width: 100%; justify-content: center; }
+    .node-card {
+      flex: 1; background: #0c0d12; border: 1px solid #222; border-radius: 16px; padding: 30px 24px;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0; transform: translateY(40px); position: relative; overflow: hidden;
+    }
+    .node-card::before { content: ""; position: absolute; inset: 0; border-radius: 16px; padding: 1.5px; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; pointer-events: none; }
+    
+    /* Specific Node Accents */
+    .node-1::before { background: linear-gradient(135deg, #EF4444, transparent); }
+    .node-2::before { background: linear-gradient(135deg, #EAB308, transparent); }
+    .node-3::before { background: linear-gradient(135deg, #F59E0B, #DC2626); }
+
+    .node-icon {
+      width: 60px; height: 60px; border-radius: 14px; display: flex; justify-content: center; align-items: center;
+      margin-bottom: 20px;
+    }
+    .node-1 .node-icon { background: rgba(239, 68, 68, 0.15); border: 1px solid #EF4444; color: #EF4444; }
+    .node-2 .node-icon { background: rgba(234, 179, 8, 0.15); border: 1px solid #EAB308; color: #EAB308; }
+    .node-3 .node-icon { background: rgba(245, 158, 11, 0.15); border: 1px solid #F59E0B; color: #F59E0B; }
+
+    .node-code { font-size: 11px; font-weight: 800; font-family: monospace; letter-spacing: 1px; margin-bottom: 8px; }
+    .node-1 .node-code { color: #EF4444; }
+    .node-2 .node-code { color: #EAB308; }
+    .node-3 .node-code { color: #F59E0B; }
+
+    .node-name { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .node-desc { font-size: 12.5px; color: #999; line-height: 1.5; }
+
+    .node-card.show { opacity: 1; transform: translateY(0); }
+
+    /* Callout Banner */
+    .bottom-callout {
+      margin-top: 45px; background: rgba(234, 179, 8, 0.08); border: 1px solid #EAB308;
+      border-radius: 50px; padding: 14px 32px; display: flex; align-items: center; gap: 12px;
+      opacity: 0; transform: translateY(20px); transition: all 0.6s ease;
+    }
+    .bottom-callout.show { opacity: 1; transform: translateY(0); }
+    .callout-text { font-size: 15px; font-weight: 800; color: #EAB308; letter-spacing: 0.5px; }
+
+    /* Keyframes */
+    @keyframes pulseRed {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(0.98); }
+    }
+
+    /* Progress bar */
+    .progress-track { position: absolute; bottom: 0; left: 0; height: 4px; width: 100%; background: #111; z-index: 100; }
+    #progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #EF4444, #EAB308); transition: width 0.1s linear; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Timeline HUD -->
+  <div class="hud">
+    <div class="hud-left">
+      <span class="hud-badge">PROMPT PREVIEW (0:00 - 0:45)</span>
+      <span>PITCH VIDEO INTRO STAGE</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:20px;">
+      <div class="hud-time" id="clockDisplay">00:00 / 00:45</div>
+      <div class="hud-controls">
+        <button id="btnPlayPause">▶ Start 45s Sequence</button>
+        <button id="btnReset">↺ Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Animated Stage -->
+  <div id="stage">
+    
+    <!-- SCENE 1 (0:00 to 0:15) -->
+    <div class="scene" id="scene1">
+      <div class="split-left">
+        <div class="status-tag">Critical Month-End Crisis</div>
+        <div class="avatar-wrapper">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+          </svg>
+        </div>
+        <h2 class="crisis-title">Finance Teams Are Flying Blind</h2>
+        <p class="crisis-sub">Frantically matching 10,000+ bank rows, messy ERP records, and hidden tax liabilities late at night.</p>
+      </div>
+      <div class="split-right">
+        <div class="stamp-box" id="stampBox">
+          <div class="stamp-header">⚠️ STATUTORY TAX NOTICE DETECTED</div>
+          <div class="stamp-body">
+            • <span>NOTICE U/S 43B(h):</span> MSME 45-Day Payment Rule Defaulted.<br>
+            • <span>TDS SECTION 194J & 194R:</span> Split Consulting Retainers Flagged.<br>
+            • <span>GSTR-2B AUDIT:</span> ₹1.8L Input Tax Credit Disallowed.
+          </div>
+        </div>
+
+        <div class="ticker-card" id="tickerCard">
+          <div class="ticker-label">Total Compound Tax Add-back Liability</div>
+          <div class="ticker-amount" id="counterAmount">₹0</div>
+          <div style="font-size:11px; color:#888;">Compounding at 3x RBI Repo Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 2 (0:15 to 0:45) -->
+    <div class="scene" id="scene2">
+      <h2 class="scene2-title">The 3 Indian Compliance Landmines</h2>
+      <p class="scene2-sub">A single overlooked invoice will trigger crushing financial penalties.</p>
+
+      <div class="nodes-grid">
+        <!-- Node 1 -->
+        <div class="node-card node-1" id="node1">
+          <div class="node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="node-code">SECTION 194J & 194R</div>
+          <div class="node-name">TDS Structuring Traps</div>
+          <p class="node-desc">Split retainers and contractor perks disguised as gifts to bypass the ₹30k TDS threshold.</p>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="node-card node-2" id="node2">
+          <div class="node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="node-code">SECTION 43B(h) MANDATE</div>
+          <div class="node-name">MSME 45-Day Clock</div>
+          <p class="node-desc">Mandatory 45-day payment cycle for micro vendors. Miss it, and you forfeit expense deductions.</p>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="node-card node-3" id="node3">
+          <div class="node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="node-code">DISALLOWANCE & INTEREST</div>
+          <div class="node-name">Double Penalty Impact</div>
+          <p class="node-desc">30% corporate tax add-back liability combined with compounding monthly interest at 3x RBI rate.</p>
+        </div>
+      </div>
+
+      <!-- Callout -->
+      <div class="bottom-callout" id="bottomCallout">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span class="callout-text">"One delayed invoice can erase an entire quarter’s runway."</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="progress-track"><div id="progress-fill"></div></div>
+
+  <script>
+    let isPlaying = false;
+    let currentTime = 0; // in seconds
+    const totalDuration = 45; // exactly 45 seconds
+    let interval = null;
+
+    const clockDisplay = document.getElementById("clockDisplay");
+    const progressFill = document.getElementById("progress-fill");
+    const btnPlayPause = document.getElementById("btnPlayPause");
+    const btnReset = document.getElementById("btnReset");
+
+    const scene1 = document.getElementById("scene1");
+    const scene2 = document.getElementById("scene2");
+    const stampBox = document.getElementById("stampBox");
+    const tickerCard = document.getElementById("tickerCard");
+    const counterAmount = document.getElementById("counterAmount");
+
+    const node1 = document.getElementById("node1");
+    const node2 = document.getElementById("node2");
+    const node3 = document.getElementById("node3");
+    const bottomCallout = document.getElementById("bottomCallout");
+
+    function renderTimeline(sec) {
+      const mins = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      clockDisplay.innerText = `${mins.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')} / 00:45`;
+      progressFill.style.width = `${(sec / totalDuration) * 100}%`;
+
+      // 00:00 to 00:15 -> Scene 1
+      if (sec < 15) {
+        scene1.classList.add("active");
+        scene2.classList.remove("active");
+
+        if (sec >= 5) stampBox.classList.add("show");
+        else stampBox.classList.remove("show");
+
+        if (sec >= 9) {
+          tickerCard.classList.add("show");
+          // Animate counter up to 4,85,000
+          const progress = Math.min(1, (sec - 9) / 4);
+          const val = Math.floor(progress * 485000);
+          counterAmount.innerText = `₹${val.toLocaleString()}`;
+        } else {
+          tickerCard.classList.remove("show");
+          counterAmount.innerText = `₹0`;
+        }
+      } 
+      // 00:15 to 00:45 -> Scene 2
+      else {
+        scene1.classList.remove("active");
+        scene2.classList.add("active");
+
+        if (sec >= 16) node1.classList.add("show"); else node1.classList.remove("show");
+        if (sec >= 24) node2.classList.add("show"); else node2.classList.remove("show");
+        if (sec >= 32) node3.classList.add("show"); else node3.classList.remove("show");
+        if (sec >= 38) bottomCallout.classList.add("show"); else bottomCallout.classList.remove("show");
+      }
+
+      if (sec >= totalDuration) {
+        pause();
+      }
+    }
+
+    function play() {
+      isPlaying = true;
+      btnPlayPause.innerText = "⏸ Pause";
+      interval = setInterval(() => {
+        currentTime += 0.1;
+        renderTimeline(currentTime);
+      }, 100);
+    }
+
+    function pause() {
+      isPlaying = false;
+      btnPlayPause.innerText = "▶ Resume";
+      clearInterval(interval);
+    }
+
+    btnPlayPause.addEventListener("click", () => {
+      if (isPlaying) pause();
+      else play();
+    });
+
+    btnReset.addEventListener("click", () => {
+      pause();
+      currentTime = 0;
+      renderTimeline(0);
+      btnPlayPause.innerText = "▶ Start 45s Sequence";
+    });
+
+    // Initial render
+    renderTimeline(0);
+  </script>
+</body>
+</html>

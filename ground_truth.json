@@ -1,0 +1,421 @@
+{
+  "starting_cash_balance": 1500000.0,
+  "transactions": {
+    "TX-REV-6360A": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer revenue invoice payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-8026B": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer monthly retainer payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-PAY-2818": {
+      "verdict": "matched",
+      "category": "Employee Payroll",
+      "flags": [],
+      "reasoning": "Standard monthly salary payroll clearance. TDS processed via separate batch.",
+      "correct_adjustment": ""
+    },
+    "TX-RNT-3963": {
+      "verdict": "matched",
+      "category": "Rent OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly office lease rent. Amount falls below professional TDS thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-SaaS-4118": {
+      "verdict": "matched",
+      "category": "Software Subscription OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly SaaS subscription billing.",
+      "correct_adjustment": ""
+    },
+    "TX-AWS-5583": {
+      "verdict": "matched",
+      "category": "Server Hosting COGS",
+      "flags": [],
+      "reasoning": "Standard server compute hosting charges with valid GSTIN and receipt.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6621": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6542": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6663": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-4375A": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer revenue invoice payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-6950B": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer monthly retainer payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-PAY-2795": {
+      "verdict": "matched",
+      "category": "Employee Payroll",
+      "flags": [],
+      "reasoning": "Standard monthly salary payroll clearance. TDS processed via separate batch.",
+      "correct_adjustment": ""
+    },
+    "TX-RNT-3738": {
+      "verdict": "matched",
+      "category": "Rent OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly office lease rent. Amount falls below professional TDS thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-SaaS-4270": {
+      "verdict": "matched",
+      "category": "Software Subscription OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly SaaS subscription billing.",
+      "correct_adjustment": ""
+    },
+    "TX-AWS-5086": {
+      "verdict": "matched",
+      "category": "Server Hosting COGS",
+      "flags": [],
+      "reasoning": "Standard server compute hosting charges with valid GSTIN and receipt.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6467": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6681": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6755": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-4482A": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer revenue invoice payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-3100B": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer monthly retainer payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-PAY-2671": {
+      "verdict": "matched",
+      "category": "Employee Payroll",
+      "flags": [],
+      "reasoning": "Standard monthly salary payroll clearance. TDS processed via separate batch.",
+      "correct_adjustment": ""
+    },
+    "TX-RNT-3702": {
+      "verdict": "matched",
+      "category": "Rent OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly office lease rent. Amount falls below professional TDS thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-SaaS-4938": {
+      "verdict": "matched",
+      "category": "Software Subscription OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly SaaS subscription billing.",
+      "correct_adjustment": ""
+    },
+    "TX-AWS-5229": {
+      "verdict": "matched",
+      "category": "Server Hosting COGS",
+      "flags": [],
+      "reasoning": "Standard server compute hosting charges with valid GSTIN and receipt.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6050": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6102": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6992": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-7285A": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer revenue invoice payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-4745B": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer monthly retainer payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-PAY-2569": {
+      "verdict": "matched",
+      "category": "Employee Payroll",
+      "flags": [],
+      "reasoning": "Standard monthly salary payroll clearance. TDS processed via separate batch.",
+      "correct_adjustment": ""
+    },
+    "TX-RNT-3741": {
+      "verdict": "matched",
+      "category": "Rent OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly office lease rent. Amount falls below professional TDS thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-SaaS-4535": {
+      "verdict": "matched",
+      "category": "Software Subscription OpEx",
+      "flags": [],
+      "reasoning": "Standard monthly SaaS subscription billing.",
+      "correct_adjustment": ""
+    },
+    "TX-AWS-5336": {
+      "verdict": "matched",
+      "category": "Server Hosting COGS",
+      "flags": [],
+      "reasoning": "Standard server compute hosting charges with valid GSTIN and receipt.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6101": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6879": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6394": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-2558A": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer revenue invoice payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-REV-3242B": {
+      "verdict": "matched",
+      "category": "Revenue",
+      "flags": [],
+      "reasoning": "Standard customer monthly retainer payment received.",
+      "correct_adjustment": ""
+    },
+    "TX-PAY-2102": {
+      "verdict": "matched",
+      "category": "Employee Payroll",
+      "flags": [],
+      "reasoning": "Standard monthly salary payroll clearance. TDS processed via separate batch.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6446": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6257": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-MISC-6596": {
+      "verdict": "matched",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [],
+      "reasoning": "Minor business operational expenditure. Below receipt thresholds.",
+      "correct_adjustment": ""
+    },
+    "TX-TDS-ERR-655": {
+      "verdict": "exception",
+      "category": "Professional Fees OpEx",
+      "flags": [
+        "TDS_UNDER_DEDUCTION"
+      ],
+      "reasoning": "Professional fees payout of Rs. 46,323 exceeds the Rs. 30,000 threshold and lacks the mandatory 10% TDS deduction.",
+      "correct_adjustment": "Debit IT-SEC-194J (Professional Fees) Rs. 4632; Credit IT-PAYABLE (TDS Payable) Rs. 4632 under Section 194J."
+    },
+    "TX-MSME-ERR-917": {
+      "verdict": "exception",
+      "category": "Raw Materials COGS",
+      "flags": [
+        "MSME_PAYMENT_DELAY"
+      ],
+      "reasoning": "Invoice from MSME Micro supplier Raj Packers remained unpaid for 53 days, violating Section 43B(h) (45-day payment close rule).",
+      "correct_adjustment": "Debit IT-SEC-43B (Disallowed MSME Provision) Rs. 240,066; Credit TAX-RESERVE (Tax Liability Add-Back) Rs. 240,066."
+    },
+    "TX-MSME-PYMT-778": {
+      "verdict": "matched",
+      "category": "Raw Materials COGS",
+      "flags": [],
+      "reasoning": "Settlement of Raj Packers packing materials invoice. Payout itself is correct, invoice was delayed.",
+      "correct_adjustment": ""
+    },
+    "TX-GST-ERR-516": {
+      "verdict": "exception",
+      "category": "Marketing OpEx",
+      "flags": [
+        "GSTR2B_MISMATCH"
+      ],
+      "reasoning": "Vendor Alpha Ads is unfiled in GSTR-2B. Cannot claim Rs. 18,000 Input Tax Credit (ITC).",
+      "correct_adjustment": "Debit GST-EXP-HOLD (GST Withholding) Rs. 18,000; Credit GST-ITC-UNAVAILABLE (Blocked ITC Reserve) Rs. 18,000."
+    },
+    "TX-HTL-ERR-593": {
+      "verdict": "exception",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [
+        "MISSING_RECEIPT"
+      ],
+      "reasoning": "Travel accommodation expense of Rs. 16,159 exceeds corporate audit limit (Rs. 10,000) and lacks a receipt upload.",
+      "correct_adjustment": "Debit AUD-SUSPENSE (Auditing Suspense) Rs. 16158; Credit EXP-TRAVEL (Travel Expense Reversion) Rs. 16158 due to missing receipt."
+    },
+    "TX-RNT-AUG-B": {
+      "verdict": "exception",
+      "category": "Rent OpEx",
+      "flags": [
+        "DUPLICATE_PAYMENT"
+      ],
+      "reasoning": "Duplicate rent payment of Rs. 75,000 detected to Sharma Realty on 2026-08-10.",
+      "correct_adjustment": "Debit REC-SHARMA (Receivable from Sharma Realty) Rs. 75,000; Credit EXP-RENT (Rent Expense Duplicate Void) Rs. 75,000."
+    },
+    "TX-RNT-AUG-A": {
+      "verdict": "matched",
+      "category": "Rent OpEx",
+      "flags": [],
+      "reasoning": "Standard rent expense. Valid rent counterpart.",
+      "correct_adjustment": ""
+    },
+    "TX-SLK-SPIKE": {
+      "verdict": "exception",
+      "category": "Software Subscription OpEx",
+      "flags": [
+        "SAAS_PRICE_SPIKE"
+      ],
+      "reasoning": "Slack subscription cost surged by 250% from Rs. 10,000 to Rs. 35,000 without contract approval.",
+      "correct_adjustment": "Debit EXP-SOFTWARE (SaaS Review Buffer) Rs. 25,000; Credit REC-SAAS-RECON (Unapproved SaaS cost variance) Rs. 25,000."
+    },
+    "TX-TDS-SPLIT-A": {
+      "verdict": "exception",
+      "category": "Professional Fees OpEx",
+      "flags": [
+        "TDS_UNDER_DEDUCTION"
+      ],
+      "reasoning": "Split payment trick identified. Two consulting fees of Rs. 20,000 cleared within 24 hours to the same vendor, totaling Rs. 40,000, bypassing the Section 194J professional TDS threshold (Rs. 30,000) without withholding.",
+      "correct_adjustment": "Debit IT-SEC-194J (TechConsulting Professional Fees) Rs. 3984; Credit IT-PAYABLE (TDS Payable) Rs. 3984."
+    },
+    "TX-TDS-SPLIT-B": {
+      "verdict": "exception",
+      "category": "Professional Fees OpEx",
+      "flags": [
+        "TDS_UNDER_DEDUCTION"
+      ],
+      "reasoning": "Split payment trick identified. Two consulting fees of Rs. 20,000 cleared within 24 hours to the same vendor, totaling Rs. 40,000, bypassing the Section 194J professional TDS threshold (Rs. 30,000) without withholding.",
+      "correct_adjustment": "Debit IT-SEC-194J (TechConsulting Professional Fees) Rs. 3984; Credit IT-PAYABLE (TDS Payable) Rs. 3984."
+    },
+    "TX-MSME-TYPO": {
+      "verdict": "exception",
+      "category": "Raw Materials COGS",
+      "flags": [
+        "MSME_PAYMENT_DELAY"
+      ],
+      "reasoning": "MSME vendor name typo resolved. 'Rajj Packrs' matched to micro-MSME 'Raj Packers'. Invoice remained unpaid for 48 days, exceeding the Section 43B(h) 45-day payment close rule.",
+      "correct_adjustment": "Debit IT-SEC-43B (Disallowed MSME Provision) Rs. 100,011; Credit TAX-RESERVE (Tax Liability Add-Back) Rs. 100,011."
+    },
+    "TX-RNT-AUG-TYPO": {
+      "verdict": "exception",
+      "category": "Rent OpEx",
+      "flags": [
+        "DUPLICATE_PAYMENT"
+      ],
+      "reasoning": "Duplicate rent payment audit mismatch. Payout of Rs. 75,000 to 'Shrma Relty' on 2026-08-10 is a duplicate of rent paid to 'Sharma Realty' on the same date.",
+      "correct_adjustment": "Debit REC-SHARMA (Receivable from Sharma Realty) Rs. 75,189; Credit EXP-RENT (Rent Expense Duplicate Void) Rs. 75,189."
+    },
+    "TX-GFT-194R": {
+      "verdict": "exception",
+      "category": "Office Meals & Travel OpEx",
+      "flags": [
+        "TDS_UNDER_DEDUCTION"
+      ],
+      "reasoning": "Contractor gift benefit audit failure. Payout for contractor Rohan's laptop (Rs. 25,000) exceeds Section 194R annual perquisite limit (Rs. 20,000) and lacks mandatory 10% TDS.",
+      "correct_adjustment": "Debit IT-SEC-194R (Contractor perks withholding) Rs. 2,327; Credit IT-PAYABLE (TDS Payable) Rs. 2,327."
+    },
+    "TX-AWS-TYPO": {
+      "verdict": "exception",
+      "category": "Server Hosting COGS",
+      "flags": [
+        "MISSING_RECEIPT"
+      ],
+      "reasoning": "Typo in vendor 'AWS Servers Inc' resolved. Cloud hosting expense of Rs. 12,000 exceeds Rs. 10,000 invoice threshold and lacks a receipt upload.",
+      "correct_adjustment": "Debit AUD-SUSPENSE (Auditing Suspense) Rs. 11,131; Credit EXP-SOFTWARE (Software Expense Reversion) Rs. 11,131."
+    }
+  }
+}

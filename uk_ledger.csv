@@ -1,0 +1,35 @@
+TransactionID,Date,Description,Debit,Credit,Amount,Currency,ReferenceID,Counterparty,Account
+UK-TX-3001,2026-08-24,Client payment invoice #301,2394.8,,2394.8,GBP,REF-EXT-4001,Client L,Accounts Receivable
+UK-TX-3002,2026-08-13,Client payment invoice #302,2907.68,,2907.68,GBP,REF-EXT-4002,Client M,Accounts Receivable
+UK-TX-3003,2026-08-13,Client payment invoice #303,2722.44,,2722.44,GBP,REF-EXT-4003,Client N,Accounts Receivable
+UK-TX-3004,2026-08-20,Co-working Space Rent,,3927.35,-3927.35,GBP,REF-EXT-4004,UK Supplier Y,Equipment
+UK-TX-3005,2026-08-06,Co-working Space Rent,,226.02,-226.02,GBP,REF-EXT-4005,UK Supplier X,Utilities
+UK-TX-3006,2026-08-30,Client payment invoice #306,1017.71,,1017.71,GBP,REF-EXT-4006,Client Q,Accounts Receivable
+UK-TX-3007,2026-08-02,Client payment invoice #307,585.72,,585.72,GBP,REF-EXT-4007,Client R,Accounts Receivable
+UK-TX-3008,2026-08-04,Co-working Space Rent,,1028.85,-1028.85,GBP,REF-EXT-4008,UK Supplier X,Equipment
+UK-TX-3009,2026-08-16,Utility Bill,,1818.51,-1818.51,GBP,REF-EXT-4009,UK Supplier Z,Professional Fees
+UK-TX-3010,2026-08-14,Client payment invoice #310,606.96,,606.96,GBP,REF-EXT-4010,Client K,Accounts Receivable
+UK-TX-3011,2026-08-27,Hardware Purchase,,1668.5,-1668.5,GBP,REF-EXT-4011,UK Supplier X,Professional Fees
+UK-TX-3012,2026-08-27,Client payment invoice #312,2851.37,,2851.37,GBP,REF-EXT-4012,Client M,Accounts Receivable
+UK-TX-3013,2026-08-08,Local Consulting Fee,,3992.31,-3992.31,GBP,REF-EXT-4013,UK Supplier Y,Rent Expense
+UK-TX-3014,2026-08-09,Client payment invoice #314,3191.91,,3191.91,GBP,REF-EXT-4014,Client O,Accounts Receivable
+UK-TX-3015,2026-08-30,Utility Bill,,133.6,-133.6,GBP,REF-EXT-4015,UK Supplier Z,Equipment
+UK-TX-3016,2026-08-01,Client payment invoice #316,2625.13,,2625.13,GBP,REF-EXT-4016,Client Q,Accounts Receivable
+UK-TX-3017,2026-08-10,Client payment invoice #317,2587.05,,2587.05,GBP,REF-EXT-4017,Client R,Accounts Receivable
+UK-TX-3018,2026-08-28,Local Consulting Fee,,374.74,-374.74,GBP,REF-EXT-4018,UK Supplier Z,Equipment
+UK-TX-3019,2026-08-02,Client payment invoice #319,2920.99,,2920.99,GBP,REF-EXT-4019,Client T,Accounts Receivable
+UK-TX-3020,2026-08-29,Client payment invoice #320,3906.76,,3906.76,GBP,REF-EXT-4020,Client K,Accounts Receivable
+UK-TX-3021,2026-08-23,Utility Bill,,2482.02,-2482.02,GBP,REF-EXT-4021,UK Supplier Z,Utilities
+UK-TX-3022,2026-08-29,Client payment invoice #322,2797.06,,2797.06,GBP,REF-EXT-4022,Client M,Accounts Receivable
+UK-TX-3023,2026-08-23,Utility Bill,,1299.55,-1299.55,GBP,REF-EXT-4023,UK Supplier X,Equipment
+UK-TX-3024,2026-08-13,Client payment invoice #324,2921.74,,2921.74,GBP,REF-EXT-4024,Client O,Accounts Receivable
+UK-TX-3025,2026-08-07,Co-working Space Rent,,3640.54,-3640.54,GBP,REF-EXT-4025,UK Supplier Y,Equipment
+UK-TX-6001,2026-08-01,Intercompany loan from USA Corp,78076.2,,78076.2,GBP,REF-L001,USA Corp,Due to USA Corp
+UK-TX-6002,2026-08-15,August Engineering Services Invoice,,15000.0,-15000.0,GBP,REF-INV-202,USA Corp,Due from USA Corp
+UK-TX-6004,2026-08-20,Cash received from USA Corp,8294.529999999999,,8294.529999999999,GBP,REF-P441,USA Corp,Due to USA Corp
+UK-TX-6005,2026-09-02,Capital injection from US Parent,19714.53,,19714.53,GBP,REF-E311,USA Corp,Due to USA Corp
+UK-TX-6006A,2026-08-22,Consulting fee billed to USA Corp,,12000.0,-12000.0,GBP,REF-C222,USA Corp,Due from USA Corp
+UK-TX-6006B,2026-08-22,Consulting fee billed to USA Corp,,12000.0,-12000.0,GBP,REF-C222,USA Corp,Due from USA Corp
+UK-TX-6007,2026-08-10,Software subscription expense,5000.0,,5000.0,GBP,REF-S101,Software Corp,Accounts Payable - Software Corp
+UK-TX-6008,2026-08-28,August Marketing Services billing,,8000.0,-8000.0,GBP,REF-INV-205,USA Corp,Due from USA Corp
+UK-TX-6009,2026-08-12,Received settlement for legal fees from Parent,4200.0,,4200.0,GBP,,USA Corp,Due to USA Corp
