@@ -2,8 +2,7 @@
 
 > **Submitted for:** Razorpay AI Builder Internship 2026  
 > **Track:** AI Finance Controller Track  
-> **Author:** Project Candidate  
-> **Live Demo:** [auraaudit.vercel.app](https://auraaudit.vercel.app) *(or local preview)*  
+> **Author:** Jahnvi Paliwal
 
 ---
 
@@ -18,19 +17,22 @@
 ## Application Preview & Visual Showcase
 
 ### 1. Unified Controller Command Center & Statutory Audit KPIs
-![AuraAudit Dashboard Overview](docs/screenshots/dashboard_overview.png)
+<img width="718" height="422" alt="image" src="https://github.com/user-attachments/assets/cb2dba20-dee4-4345-9a21-4ce7959103e4" />
+
 *Real-time executive cockpit displaying reconciliation match rate (98.2%), flagged statutory compliance exceptions, active runway months, and instant anomaly alerts.*
 
 ---
 
 ### 2. Statutory Tax Exceptions & Automated Double-Entry Adjusting Journals
-![Actionable Exceptions & Adjustments](docs/screenshots/exceptions_adjustments.png)
+<img width="1038" height="472" alt="image" src="https://github.com/user-attachments/assets/4e8ba68f-b10d-49c0-938d-6676fd5a7bac" />
+
 *Automated detection of Section 43B(h) MSME defaults, Section 194J/194R TDS under-deductions, GSTR-2B ITC mismatches, and 1-click generation of balanced debit/credit journals.*
 
 ---
 
 ### 3. Monte Carlo Treasury Cashflow Simulation & Strategy Playground
-![Monte Carlo Runway & Scenario Modeling](docs/screenshots/monte_carlo_forecast.png)
+<img width="722" height="440" alt="image" src="https://github.com/user-attachments/assets/18942d04-d506-4369-ad0d-3bb1e0ee84cd" />
+
 *Stochastic 6-month forecasting showing P10 (bear), P50 (base), and P90 (bull) confidence intervals with real-time sliders for headcount, CAC, pricing, and vendor payment delays.*
 
 ---
